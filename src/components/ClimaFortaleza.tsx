@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { obterClima } from '../API/Api';
-import './ClimaFortaleza.css'; 
+import '../Css/ClimaFortaleza.css'; 
 
 type Clima = {
   temperatura: string;
@@ -14,20 +14,26 @@ const ClimaFortaleza: React.FC = () => {
 
   useEffect(() => {
     const buscarClima = async () => {
-      const dados = await obterClima('Fortaleza');
-      if (dados) {
-        const climaFormatado = {
-          temperatura: dados.main.temp.toFixed(1),
-          descricao: dados.weather[0].description,
-          icone: `http://openweathermap.org/img/wn/${dados.weather[0].icon}.png`,
-        };
-        setClima(climaFormatado);
-      } else {
-        setClima(null); 
+      try {
+        const dados = await obterClima('Fortaleza');
+        console.log(dados); 
+        if (dados) {
+          const climaFormatado = {
+            temperatura: dados.main.temp.toFixed(1),
+            descricao: dados.weather[0].description,
+            icone: `http://openweathermap.org/img/wn/${dados.weather[0].icon}.png`,
+          };
+          setClima(climaFormatado);
+        } else {
+          setClima(null);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error('Erro ao buscar o clima', error);
+        setLoading(false);
       }
-      setLoading(false);
     };
-  
+
     buscarClima();
   }, []);
 

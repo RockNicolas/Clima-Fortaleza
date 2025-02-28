@@ -1,7 +1,9 @@
 import axios from 'axios';
 
-const API_KEY = '6b37221f05cd8c9669d038255b43e1ff';
+
+const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
+
 
 export const obterClima = async (cidade: string) => {
   try {
