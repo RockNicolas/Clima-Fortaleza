@@ -37,7 +37,6 @@ const Home: React.FC = () => {
       <div className="clouds"></div>
       <img src={getImageForWeather()} alt="img" />
       <h2 className="title">Bem-vindo ao aplicativo de clima!</h2>
-      <p className="description">Aqui você pode verificar o clima de Fortaleza.</p>
       {loading ? (
         <p>Carregando...</p>
       ) : (
