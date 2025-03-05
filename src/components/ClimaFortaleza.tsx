@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { obterClima } from '../API/Api';
 import '../Style/ClimaFortaleza.css'; 
+import { Link } from 'react-router-dom';
 
 type Clima = {
   temperatura: string;
@@ -46,15 +47,18 @@ const ClimaFortaleza: React.FC = () => {
   }
 
   return (
-    <div className="clima-container">
+    <div className="clima-container" >
       <h1 className="titulo">Clima em Fortaleza</h1>
       <div className="clima-info">
         <img className="clima-icone" src={clima.icone} alt="Ícone do clima" />
         <p className="descricao">{clima.descricao}</p>
         <h2 className="temperatura">{clima.temperatura}°C</h2>
       </div>
+      <Link to="/">
+          <button className="weather-button">Voltar</button>
+        </Link>
     </div>
   );
-};
+}
 
 export default ClimaFortaleza;

@@ -39,26 +39,6 @@
   background-color: #0056b3;
 }
 
-.clouds {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/clouds.png'); 
-    background-size: cover;
-    z-index: -1; 
-    animation: move-clouds 10s infinite linear;
-}
-
-@keyframes move-clouds {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
 
 @media (max-width: 768px) {
   .title {

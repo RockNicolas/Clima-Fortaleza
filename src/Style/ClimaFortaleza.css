@@ -25,7 +25,7 @@ body {
 .clima-info {
     text-align: center;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(135, 206, 250);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 250px;
@@ -62,4 +62,43 @@ body {
     color: #ff3333;
     text-align: center;
     margin-top: 50px;
+}
+
+.weather-button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+.weather-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .titulo {
+        font-size: 1.8rem;
+    }
+
+    .clima-icone {
+        width: 50px;
+        height: 50px;
+    }
+
+    .descricao {
+        font-size: 1rem;
+    }
+
+    .temperatura {
+        font-size: 2rem;
+    }
+
+    .weather-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
 }
