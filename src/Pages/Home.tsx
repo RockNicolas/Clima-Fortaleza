@@ -22,13 +22,13 @@ const Home: React.FC = () => {
   const getImageForWeather = () => {
     switch (clima) {
       case 'clear':
-        return '..public/icon/sol.png';
+        return 'public/icon/nuvens.png';
       case 'clouds':
-        return '../public/icon/nuvens.png'; 
+        return 'public/icon/nuvens.png'; 
       case 'rain':
-        return '..public/icon/chuva.png'; 
+        return 'public/icon/chuva.png'; 
       default:
-        return '../public/icon/nuvens-e-sol.png'; 
+        return 'public/icon/nuvens-e-sol.png'; 
     }
   };
 
