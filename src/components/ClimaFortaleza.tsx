@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { obterClima } from '../API/Api';
-import '../Css/ClimaFortaleza.css'; 
+import '../Style/ClimaFortaleza.css'; 
 
 type Clima = {
   temperatura: string;
